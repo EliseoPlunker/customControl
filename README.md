@@ -48,3 +48,6 @@ Given a data in the way [value1,value4], show a list of Checkbox to choose
 * **isRequired** : Optional, if include it, show an error in no selecion made
 * **isString**   : Optional, if include it, the control get/return a string with the values separated by commas
 
+### Example
+---
+[see in stackblitz](https://stackblitz.com/edit/checkbox-group-3jv33)

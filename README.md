@@ -23,7 +23,7 @@ import {CustomLibModule} from 'eliseo-custom-lib';
 Controls
 ---
 
-*check-box-group
+* check-box-group
 
 check-box-group
 ---

@@ -20,11 +20,12 @@ import {CustomLibModule} from 'eliseo-custom-lib';
    ...
 })
 ```
-##Controls
+Controls
 ---
+
 *check-box-group
 
-##check-box-group
+check-box-group
 ---
 ```
       <check-box-group name="props" 
@@ -40,6 +41,7 @@ Given a data in the way [value1,value4], show a list of Checkbox to choose
 
 Inputs
 ---
+
 * **source**     : (array of object) with two properties
 * **cols**       : (string) name of the properties separated by commas
 * **customClass**: (string) Optional

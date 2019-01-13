@@ -7,12 +7,10 @@ incluye in your angular.json bootstrap.css
 **Instalation**
 usage
 ```
-#code block
  npm install eliseo-custom-lib
 ```
 Once installed you need to import our main module
 ```
-#code block
 import {CustomLibModule} from 'eliseo-custom-lib';
 @NgModule({
    ...
@@ -27,7 +25,6 @@ import {CustomLibModule} from 'eliseo-custom-lib';
 ##check-box-group
 ---
 ```
-#code block
       <check-box-group name="props" 
 	        [source]="your data" 
 			 cols="col1,col2" 

@@ -50,4 +50,4 @@ Given a data in the way [value1,value4], show a list of Checkbox to choose
 
 ### Example
 ---
-[see in stackblitz](https://stackblitz.com/edit/checkbox-group-3jv33)
+see in [stackblitz](https://stackblitz.com/edit/checkbox-group-3jv33)

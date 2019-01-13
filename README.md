@@ -35,11 +35,11 @@ check-box-group
 			 isRequired
 			 isString>
 ```
-Claim
+### Claim
 ---
 Given a data in the way [value1,value4], show a list of Checkbox to choose
 
-Inputs
+### Inputs
 ---
 
 * **source**     : (array of object) with two properties

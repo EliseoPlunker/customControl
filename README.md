@@ -85,5 +85,4 @@ Create a dropdown that show a table, not an unique value, but return the value o
 
 ### Example
 ---
----
 see in [stackblitz](https://stackblitz.com/edit/checkbox-group-3jv33)

@@ -1,0 +1,22 @@
+<ng-content></ng-content>
+<div class="combo-container">
+    <span class="drop-down">
+
+        <input #text type="text" [value]="value" class="form-control inputBox" [ngClass]="{'placeHolder':counter==-1}"
+            (keydown)="onKeyDownAction($event)" (click)="toogleDropDown()" (blur)="onBlurEventAction()" [ngStyle]="showDropDown?{'caret-color':'transparent'}:{'caret-color':'auto'}" />
+    </span>
+
+    <div [style.min-width]="minWidth" class="data-container" *ngIf="showDropDown">
+        <table class="table table-borderless table-hover">
+            <thead *ngIf="headersColumns" class="thead-dark">
+                <tr>
+                    <th [ngClass]="classColumns[j]" *ngFor="let header of headersColumns;let j=index">{{header}}</th>
+                </tr>
+            </thead>
+
+            <tr *ngFor="let data of dataList; let i = index" (click)="select(i)" [ngClass]="{'hightLight':counter==i}">
+                <td [ngClass]="classColumns[j]" *ngFor="let columnName of visibleColumns;let j=index">{{data[columnName]}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

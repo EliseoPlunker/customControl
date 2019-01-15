@@ -1,0 +1,41 @@
+.hightLight {
+    color: #004085;
+    background-color: #cce5ff;
+}
+.placeHolder
+{
+    color:gray;
+}
+.inputBox
+{
+    padding-right: 1rem;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAaUlEQVQ4je3OsQ2CUBQF0DMCVFIZOuMQOoALyAQwgszEHFBqpQlhGhtIKAQ/hJJTvntv8thtrsJpJj/3nUlXtDj+yFJ0uPz74oY3DqNbgk+fBcnwRIQYL9xDx4MCNRrkS8eDEo+1412gLyVhDCzpLRFXAAAAAElFTkSuQmCC') !important;
+    /*    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+      background-size:.75rem .75rem;
+    */
+    background-repeat: no-repeat;
+    background-position: right .25rem center;
+    background-color:white;
+    outline: none;
+    box-shadow: none !important;
+}
+.row
+{
+  padding:0 .75rem;
+}
+tr
+{
+    line-height: 1.2rem;
+}
+.table th, .table td {
+  padding:.5rem .75rem;
+}
+.data-container {
+    z-index: 1;
+    position: absolute;
+    background: white;
+    border: 1px solid silver;
+}
+.table{
+  margin-bottom:0;
+}

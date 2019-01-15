@@ -56,7 +56,8 @@ see in [stackblitz](https://stackblitz.com/edit/checkbox-group-3jv33)
 dropdown-table
 ---
 ```
-        <dropdown-table [source]="sourceData" searchCol="name" (change)="function($event)">
+        <dropdown-table [source]="sourceData" searchCol="name" 
+	          (change)="function($event)">
             <col-def colName="value" colClass="col-1 text-right"></col-def>
             <col-def col colName="name"></col-def>
         </dropdown-table>
@@ -71,13 +72,13 @@ Create a dropdown that show a table, not an unique value, but return the value o
 * **source**     : (array of object) who want to show
 * **searchCol**  : Options (by defect the first column of the object)
 
-   #### col-def
-   ---
+#### col-def
+---
    col-def it's used to declare the visible columns
 
-      * **colName**  : the name of the column
-      * **colClass** : the class applied to the column
-      * **colHead**  : Optional, if you want a table with head
+* **colName**  : the name of the column
+* **colClass** : the class applied to the column
+* **colHead**  : Optional, if you want a table with head
 
 ### Output
 ---

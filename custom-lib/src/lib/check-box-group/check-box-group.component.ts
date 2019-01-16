@@ -5,15 +5,15 @@ import { ControlValueAccessor,  AbstractControl, ValidationErrors,NG_VALUE_ACCES
   selector: 'check-box-group',
   template: `
       <ng-container *ngFor="let item of source;let i=index;let last=last">
-      <label *ngIf="customClass" class="container" [ngClass]="last?'last':''">
-                <input id="{{_name+''+i}}"
+      <label *ngIf="customClass" class="container" [ngClass]="{'last':last}">
+                <input id="{{_name+''+i}}" [attr.disabled]="_isDisabled?true:null"
              type="checkBox" [ngModel]="_selectedItems[i]"
-             (ngModelChange)="setValue($event,i)" (focus)="_isFocused[i]=true"(blur)="_isFocused[i]=false;onTouched()">
-{{item[_col]}}
-          <span class="checkmark" [ngClass]="_isFocused[i]?'focused':''"></span>
+             (ngModelChange)="setValue($event,i)" (focus)="_isFocused[i]=true" (blur)="_isFocused[i]=false;onTouched()">
+<span [ngClass]="{'disabled':_isDisabled}">{{item[_col]}}</span>
+          <span class="checkmark" [ngClass]="{'focused':_isFocused[i],'disabled':_isDisabled}"></span>
       </label>
-      <div  *ngIf="!customClass" [ngClass]="last?'form-group':''" class="form-check" >
-         <input type="checkbox" class="form-check-input"  id="{{_name+''+i}}"
+      <div  *ngIf="!customClass" [ngClass]="{'form-group':last}" class="form-check" >
+         <input type="checkbox" class="form-check-input"  id="{{_name+''+i}}" [attr.disabled]="_isDisabled?true:null"
               [ngModel]="_selectedItems[i]"
              (ngModelChange)="setValue($event,i)" (blur)="onTouched()" >
          <label class="form-check-label" for="{{_name+''+i}}">{{item[_col]}}</label>
@@ -58,6 +58,7 @@ export class CheckBoxGroupComponent implements ControlValueAccessor {
   _isString:boolean=false;
   _isFocused:boolean[]=[];
   _isRequired:boolean=false;
+  _isDisabled:boolean=false;
   onChange;
   onTouched;
 
@@ -82,7 +83,10 @@ export class CheckBoxGroupComponent implements ControlValueAccessor {
   }
 
   setDisabledState(isDisabled: boolean): void {
+    this._isDisabled=isDisabled;
+
   }
+
   setValue(value: boolean, index: number) {
     this._selectedItems[index] = value;
     this.onChange(this._isString?this.booleanToProps(this._selectedItems).join(','):this.booleanToProps(this._selectedItems));
@@ -116,7 +120,6 @@ export class CheckBoxGroupComponent implements ControlValueAccessor {
       })
     }
     return props;
-
   }
 
 }

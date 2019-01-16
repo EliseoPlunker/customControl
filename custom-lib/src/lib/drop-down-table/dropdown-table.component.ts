@@ -36,6 +36,7 @@ export class DropDownTableComponent implements ControlValueAccessor, AfterViewIn
   private _text: string;
   private _isArray: boolean;
   private _dataSearch: any[] = [];
+  public _isDisabled:boolean=false;
   minWidth: string;
 
   @Input() placeHolder: string = "Select option";
@@ -94,6 +95,7 @@ export class DropDownTableComponent implements ControlValueAccessor, AfterViewIn
   registerOnTouched(fn: any): void {
   }
   setDisabledState?(isDisabled: boolean): void {
+    this._isDisabled=isDisabled
   }
 
 

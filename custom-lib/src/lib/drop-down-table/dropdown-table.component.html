@@ -2,7 +2,7 @@
 <div class="combo-container">
     <span class="drop-down">
 
-        <input #text type="text" [value]="value" class="form-control inputBox" [ngClass]="{'placeHolder':counter==-1}"
+        <input #text type="text" [ngClass]="{'disabled':_isDisabled}" [attr.disabled]="_isDisabled?true:null" [value]="value" class="form-control inputBox" [ngClass]="{'placeHolder':counter==-1}"
             (keydown)="onKeyDownAction($event)" (click)="toogleDropDown()" (blur)="onBlurEventAction()" [ngStyle]="showDropDown?{'caret-color':'transparent'}:{'caret-color':'auto'}" />
     </span>
 

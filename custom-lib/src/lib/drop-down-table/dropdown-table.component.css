@@ -39,3 +39,7 @@ tr
 .table{
   margin-bottom:0;
 }
+.disabled
+{
+    opacity: .4;
+}
